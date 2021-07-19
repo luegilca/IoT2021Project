@@ -1,2 +1,11 @@
-# IoT2021Project
-IoT class project (2021-I) UNAL. ccorjuelav-luegilca
+# Sistema de supervisión automática de dispensadores sin contacto
+
+Desde que la organización mundial de la salud (OMS) el 11 de Marzo de 2020 declaró la pandemia por el nuevo virus COVID-19, se ha producido un rápido esfuerzo en diferentes comunidades de investigación para explotar una amplia variedad de tecnologías para combatir esta amenaza mundial, y la tecnología IoT es una de las pioneras en este ámbito. En ese sentido, los dispositivos y tecnologías habilitantes de IoT se utilizan para reducir la posible propagación de la COVID-19 a otras personas mediante el diagnóstico, el seguimiento y la práctica de protocolos definidos tras la recuperación del paciente. 
+
+En el ámbito de la prevención, el distanciamiento social es una práctica fundamental que ha llevado al desarrollo de nuevas tecnologías habilitantes para Internet de las Cosas, como los sensores inerciales (para mantener la distancia entre personas), captura de imágenes térmicas (sistemas de posicionamiento basados en el calor), inteligencia artificial (visión por computadora, visión de máquina, diagnósticos, detección de síntomas), y el ultrasonido (a través de pulsos de radiofrecuencia puede detectar la cercanía de personas con una precisión de centímetros).
+
+Los sensores ultrasonido en específico pueden ser usados en aplicaciones sin contacto (touchless) que promuevan el distanciamiento social como apertura de puertas y acceso a espacios, detección de aforo de personas, dispensadores automatizados, entre otros. En este aspecto, dispositivos equipados con estos sensores (como los dispensadores de líquidos desinfectantes) pueden ser instalados en múltiples ubicaciones de una construcción como en parques, centros comerciales y edificios de viviendas u oficinas.
+
+Usualmente, la tarea de supervisión de cada uno de estos dispositivos se hace de forma manual gracias al personal de mantenimiento, no obstante, gracias a las tecnologías de comunicación, es posible crear un sistema de supervisión de los dispositivos dispensadores, en aras de notificar al personal cuando uno de estos tiene una capacidad baja para disparar un procedimiento de abastecimiento. Este sistema debe responder de una forma escalable al número de dispositivos que se vayan vinculando al sistema, es decir, soportando la carga fluctuante de información proveniente de los dispositivos (como agregar, quitar dispositivos en cualquier momento) sin perder calidad.
+
+Cristian Camilo Orjuela Velandia (ccorjuelav@unal.edu.co),  Luis Ernesto Gil Castellanos (luegilca@unal.edu.co)
