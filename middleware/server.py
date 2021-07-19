@@ -23,6 +23,6 @@ while True:
       'device_id': device_id
     }
   }
-  res = requests.post('http://localhost:3000/usage', json=jsonData)
+  res = requests.post('http://localhost:3000/usages', json=jsonData)
   json_response = res.json()
   print('Response from server:', res.text)
