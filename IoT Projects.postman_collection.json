@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "330f912e-1245-44bc-9093-cd543a142b46",
+		"name": "IoT Projects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/devices",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"device\": {\n\t\t\"device_id\": 1,\n\t\t\"max_capacity_ml\": 500, \n\t\t\"dispensation_ml\": 10,\n\t\t\"alert_capacity_ml\": 50,\n\t\t\"status\": true,\n\t\t\"latitude\": \"4.618542221529607\",\n\t\t\"longitude\": \"-74.08607734242686\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/devices",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create device usage by id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"device\": {\n\t\t\"device_id\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/usages",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get usages by device",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/usages/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a device",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"device\": {\n\t\t\"dispensation_ml\": 150,\n\t\t\"alert_capacity_ml\": 200\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/devices/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"devices",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset device",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/usages/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
