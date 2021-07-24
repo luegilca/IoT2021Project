@@ -14,6 +14,8 @@ def extractDeviceId(line):
   device_id = line_stripped.split(':')
   return device_id[1]
 
+print('Server is ready and listening for serial port!')
+
 while True:
   data = readFromSerial()
   device_id = extractDeviceId(data)
