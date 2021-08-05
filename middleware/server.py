@@ -15,6 +15,7 @@ def extractDeviceId(line):
   return device_id[1]
 
 print('Server is ready and listening for serial port!')
+backend_url = 'https://blooming-shelf-43966.herokuapp.com'
 
 while True:
   data = readFromSerial()
@@ -25,6 +26,6 @@ while True:
       'device_id': device_id
     }
   }
-  res = requests.post('http://localhost:3000/usages', json=jsonData)
+  res = requests.post(backend_url + '/usages', json=jsonData)
   json_response = res.json()
   print('Response from server:', res.text)

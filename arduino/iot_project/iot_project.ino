@@ -17,15 +17,12 @@ const int btnPin        = 4;    // Pushbutton Pin
 const int ledPin        = 13;   // Led pin
 const int baudRate      = 9600; // Default baud rate
 const int releaseDelay  = 2000; // Amount of time (in ms) to detect a hand near the sensor
-const int waitDelay     = 300;  // Amount of time (in ms) to wait until servo gets back to initial state
+const int waitDelay     = 1000;  // Amount of time (in ms) to wait until servo gets back to initial state
 const int readDelay     = 200;  // Amount of time (in ms) to read pushbutton signal
-const int pressDelay    = 5;    // Amount of time (in ms) to write signal to push bottle
-const int unpressDelay  = 5;    // Amount of time (in ms) to write signal to unpush bottle
 const int threshold     = 8;    // Centimeters to trigger ultrasonic sensor
-
+const int angle         = 90;      // Rotation angle for servo motor
 // Variables
-int state     = false;  // Machine is off
-int angle     = 0;      // Rotation angle for servo motor    
+int state     = false;  // Machine is off    
 long duration, cm = 0;  // Pulse duration of ultrasonic sensor and calculated distance
 
 // Instances
@@ -95,17 +92,9 @@ void loop() {
   
     if (cm < threshold)
     {
-      for (int angle = 0; angle <= 180; angle++) {
-        myservo.write(angle);
-        delay(pressDelay);
-      }
-      
+      myservo.write(angle);
       delay(waitDelay);
-      
-      for (int angle = 180; angle > 0; angle--) { 
-        myservo.write(angle);
-        delay(unpressDelay);
-      }
+      myservo.write(angle * -1);
       // Sending usage info to bluetooth module
       moduloBtLE.write("device_id:1\n");
       Serial.println("Device used!");
